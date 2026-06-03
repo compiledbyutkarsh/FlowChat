@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+* { scrollbar-width: thin; scrollbar-color: #1E1F22 transparent; }
+body { background: #313338; color: #DBDEE1; font-family: -apple-system, BlinkMacSystemFont, 'gg sans', 'Noto Sans', sans-serif; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #1E1F22; border-radius: 2px; }
+
+@keyframes fadeIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+@keyframes bounce { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-3px); } }
+
+.msg-enter { animation: fadeIn 0.2s ease forwards; }
+.typing-dot { animation: bounce 1s infinite; display:inline-block; width:6px; height:6px; border-radius:50%; background:#B5BAC1; }
+.typing-dot:nth-child(2) { animation-delay: 0.15s; }
+.typing-dot:nth-child(3) { animation-delay: 0.3s; }
